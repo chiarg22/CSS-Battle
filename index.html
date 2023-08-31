@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let container = document.createElement("div");
+      let body = document.querySelector("body");
+      body.style.backgroundColor = "pink";
+      container.style.aspectRatio = "1"; // Height and width wil
+      // be acc to height and would be equal
+      //Like edges or dimensions would be same.
+      container.style.height = "300px";
+      container.style.backgroundColor = "yellow";
+      body.appendChild(container);
+      body.style.display = "grid";
+      body.style.placeItems = "center";
+      for (let i = 1; i <= 25; i++) {
+        let boxes = document.createElement("div");
+        boxes.style.backgroundColor = "red";
+        boxes.style.height = "60px";
+        boxes.style.width = "60px";
+        container.appendChild(boxes);
+        container.style.display = "flex";
+        container.style.flexWrap = "wrap";
+        if (i % 2 == 0) {
+          boxes.style.width = "60px";
+          boxes.style.backgroundColor = "pink";
+          //   boxes.style.backgroundColor = "pink";
+          let circle = document.createElement("div");
+          circle.style.backgroundColor = "red";
+          circle.style.height = "30px";
+          circle.style.width = "30px";
+          circle.style.borderRadius = "50%";
+          boxes.appendChild(circle);
+          boxes.style.display = "grid";
+          boxes.style.placeItems = "center";
+          if (i == 12 || i == 14) {
+            circle.style.backgroundColor = "pink";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
