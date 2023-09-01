@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let container = document.createElement("div");
+      let body = document.querySelector("body");
+      body.style.backgroundColor = "orange";
+      //If aspect-ratio and width properties are set,
+      // the height will follow in the defined aspect ratio.
+      container.style.aspectRatio = "1";
+      container.style.width = "300px";
+      // container.style.height="100px";
+      container.style.backgroundColor = "red";
+      body.appendChild(container);
+      body.style.display = "flex";
+      body.style.flexDirection = "row";
+      body.style.justifyContent = "center";
+      body.style.alignItems = "center";
+      for (let i = 1; i <= 25; i++) {
+        smally = document.createElement("div");
+        smally.style.backgroundColor = "red";
+        smally.style.height = "60px";
+        smally.style.width = "60px";
+        container.appendChild(smally);
+        container.style.display = "flex";
+        smally.style.flexDirection = "row";
+        container.style.flexWrap = "wrap";
+        if (
+          i == 1 ||
+          i == 2 ||
+          i == 4 ||
+          i == 5 ||
+          i == 6 ||
+          i == 10 ||
+          i == 16 ||
+          i == 20 ||
+          i == 21 ||
+          i == 22 ||
+          i == 24 ||
+          i == 25
+        ) {
+          smally.style.backgroundColor = "orange";
+        }
+      }
+    </script>
+  </body>
+</html>
